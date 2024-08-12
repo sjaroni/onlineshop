@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
 
 class ShoppingCart extends Component {
-  state = {
-    items: [
-    {
-      amount: 1,
-      name: 'Sneaker',
-      price: 149.95
-    },
-    {
-      amount: 1,
-      name: 'Shirt',
-      price: 39.99
-    },
-  ]
-  };
+  state = {};
 
 
   render() {
@@ -22,7 +9,7 @@ class ShoppingCart extends Component {
       <div className="shopping-cart">
         <h2>Warenkorb</h2>
 
-        { this.state.items.map(item => <div key={item.name}>{ item.amount} { item.name} </div>)}
+        { this.props.items.map(item => <div key={item.name}>{ item.amount} { item.name} { item.price} </div>)}
 
       </div>
     );
